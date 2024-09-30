@@ -1,7 +1,7 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
 
-test('Login com Sucesso', async ({ page }) => {
+test('Login com Sucesso @login', async ({ page }) => {
   await page.goto('https://automationpratice.com.br/login');
   await page.locator('#user').fill('taiss4379@gmail.com'); 
   await page.locator('#password').fill('taiss123');
@@ -10,7 +10,7 @@ test('Login com Sucesso', async ({ page }) => {
  
 });
 
-test('Login com e-mail inválido', async ({ page }) => {
+test('Login com e-mail inválido @login', async ({ page }) => {
   await page.goto('https://automationpratice.com.br/login');
   await page.locator('#user').fill('taiss4379'); 
   await page.locator('#password').fill('taiss123');
@@ -19,7 +19,7 @@ test('Login com e-mail inválido', async ({ page }) => {
  
 });
 
-test('Login com password inválido', async ({ page }) => {
+test('Login com password inválido @login', async ({ page }) => {
   await page.goto('https://automationpratice.com.br/login');
   await page.locator('#user').fill('taiss437@gmail.com'); 
   await page.locator('#password').fill('ta');
@@ -27,7 +27,7 @@ test('Login com password inválido', async ({ page }) => {
   await expect(page.getByText('Senha inválida.')).toBeVisible();
 });
 
-test ('Login com e-mail e password vazio', async ({ page }) => {
+test ('Login com e-mail e password vazio @login', async ({ page }) => {
   await page.goto('https://automationpratice.com.br/login');
   await page.locator('#user').fill('taiss4379'); 
   await page.locator('#password').fill('taiss');
