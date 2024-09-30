@@ -1,4 +1,4 @@
-name: Pipeline de teste da tais - Por pull request
+name: Pipeline de teste da tais 
 
 on:
   push:
